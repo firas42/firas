@@ -3,367 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firas Souissi - Personal Website</title>
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-        :root {
-            --primary-color: #1abc9c;
-            --secondary-color: #34495e;
-            --text-color: #2c3e50;
-            --background-color: #ecf0f1;
-            --font-primary: 'Poppins', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-primary);
-            color: var(--text-color);
-            background-color: var(--background-color);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--secondary-color);
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-            border-bottom: 4px solid var(--primary-color);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-        }
-
-        #date-time {
-            text-align: center;
-            font-size: 1rem;
-            color: #fff;
-            margin-top: 10px;
-            background-color: var(--primary-color);
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        nav {
-            background-color: var(--primary-color);
-            padding: 1rem 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #16a085;
-        }
-
-        main {
-            padding: 4rem 0;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 3rem 0;
-            background-color: var(--background-color);
-        }
-
-        .hero img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .hero img:hover {
-            transform: scale(1.05);
-        }
-
-        .hero h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-color);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        section {
-            margin-bottom: 4rem;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .about p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #7f8c8d;
-        }
-
-        .skills ul, .projects ul {
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .skills li, .projects li {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-
-        .skills li:hover, .projects li:hover {
-            background-color: #16a085;
-        }
-
-        .projects .project-card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-            text-align: center;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .projects .project-card i {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .projects .project-card:hover {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .projects .project-card h3 {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-        }
-
-        .projects .project-card p {
-            font-size: 1rem;
-            color: #7f8c8d;
-        }
-
-        .projects .project-card a {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .projects .project-card a:hover {
-            color: #16a085;
-        }
-
-        .contact a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 1.1rem;
-            color: var(--text-color);
-            text-decoration: none;
-            margin-bottom: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .contact a i {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .contact a:hover {
-            color: var(--primary-color);
-        }
-
-        footer {
-            background-color: var(--secondary-color);
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem 0;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            header, nav, footer {
-                text-align: center;
-                padding: 1rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .hero img {
-                width: 180px;
-                height: 180px;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .skills li, .projects li {
-                padding: 0.6rem 1rem;
-            }
-
-            .contact a {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <title>Firas Souissi - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            const options = { 
-                weekday: 'long', 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric', 
-                hour: '2-digit', 
-                minute: '2-digit', 
-                second: '2-digit' 
-            };
-            const formattedDateTime = now.toLocaleDateString('en-US', options);
-            document.getElementById('date-time').innerHTML = formattedDateTime;
-        }
-    
-        setInterval(updateDateTime, 1000); // Update every second
-    </script>
-    
     <header>
-        <div class="container">
-            <h1>Firas Souissi</h1>
-            <p>Web Developer & Designer</p>
-        </div>
-        <div id="date-time"></div>
-    </header>
-
-    <nav>
-        <div class="container">
+        <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+        <h1>Firas Souissi</h1>
+        <p>IT Student | Event Manager | Digital Marketing Specialist</p>
+    </header>
 
-    <main class="container">
-        <section class="hero">
-            <img src="r.jpg" alt="Firas Souissi profile picture">
-            <h2>Welcome to My Personal Website</h2>
-            <p>I'm a passionate web developer and designer creating amazing digital experiences.</p>
-        </section>
-
-        <section id="about" class="about">
+    <main>
+        <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm Firas Souissi, a web developer with a keen eye for design and a passion for creating user-friendly websites. With years of experience in the field, I strive to build responsive and accessible web applications that make a difference.</p>
+            <p>Hello! My name is Firas Souissi, and I am currently pursuing a degree in Information and Communication Technology (LTIC) at the Faculty of Sciences of Tunis. I have a passion for IT, event management, and digital marketing, with certifications in both fields. My experience spans social club leadership, creative event planning, and innovative projects in the tech space.</p>
         </section>
 
-        <section id="skills" class="skills">
-            <h2>My Skills</h2>
+        <section id="projects">
+            <h2>My Projects</h2>
             <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>cybersecurity techniques</li>
-
+                <li>
+                    <h3>Netflxy</h3>
+                    <p>A movie streaming platform with a clean and intuitive interface.</p>
+                </li>
+                <li>
+                    <h3>1hd.to</h3>
+                    <p>An online tool offering resources and guides for cybersecurity enthusiasts.</p>
+                </li>
+                <li>
+                    <h3>Go For IT Academy</h3>
+                    <p>An online academy co-founded with Yosra Bousarsar to teach IT and inspire learners.</p>
+                </li>
             </ul>
         </section>
 
-        <section id="projects" class="projects">
-            <h2>Recent Projects</h2>
-            <div class="project-cards">
-                <div class="project-card">
-                    <i class="fas fa-fish fa-3x"></i>
-                    <h3>Fishing Website for Cybersecurity</h3>
-                    <p>A website designed as a practice environment for learning hacking and cybersecurity techniques. Features simulated vulnerabilities and challenges.</p>
-                    <a href="https://github.com/firas42/instagram-clone">View Project</a>
-                </div>
-                <div class="project-card">
-                    <i class="fas fa-film fa-3x"></i>
-                    <h3>Movies Streaming Platforms</h3>
-                    <p>A platform for streaming movies with features like user accounts, recommendations, and a sleek, intuitive interface.</p>
-                    <a href="https://1hd.to/">View Project 1</a>  <a href="https://netflixyapp.github.io/">View Project 2</a>
-                </div>
-                <div class="project-card">
-                    <i class="fas fa-robot fa-3x"></i>
-                    <h3>AI Project</h3>
-                    <p>An artificial intelligence project . Implemented with cutting-edge technologies and methodologies.</p>
-                    <a href="https://www.instagram.com/fvisions_ai/">View Project</a>
-                </div>
-            </div>
-        </section>
-
         <section id="contact" class="contact">
-            <h2>Get in Touch</h2>
-            <p><a href="https://www.instagram.com/firas_rbpt/"><i class="fab fa-instagram"></i> Instagram</a></p>
-            <p><a href="https://www.linkedin.com/in/firas-souissi/"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-            <p><a href="https://github.com/firas42"><i class="fab fa-github"></i> GitHub</a></p>
+            <h2>Contact Me</h2>
+            <a href="mailto:firas.souissi@etudiant-fst.utm.tn">
+                <i class="fas fa-envelope"></i>
+                firas.souissi@etudiant-fst.utm.tn
+            </a>
+            <a href="https://wa.me/21697768880" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                +216 97 768 880
+            </a>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Firas Souissi. All rights reserved.</p>
-        </div>
+        <p>© 2025 Firas Souissi. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
